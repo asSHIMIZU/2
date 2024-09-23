@@ -1,0 +1,135 @@
+HTML/CSSを使用するときのデザインについてのメモ
+
+ボタンについて
+・ページの全体の雰囲気に合わせた色を使う。
+・↑ヘッダーが青でボタンが赤などは色が合わないので同じ系統でまとめたい。
+
+https://dubdesign.net/download/html-css/button-design/
+↑の一番上のボタン
+
+仮イメージ
+・水色か青色(ヘッダー上部も水色か青色)
+・四角
+・角丸
+・シャドウ
+
+HTML
+<div class="button001">
+	<a href="#">ボタンのデザイン</a>
+</div>
+
+CSS
+/* 001 */
+.button001 a {
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.button001 a:hover {
+    background: blue;
+    color: #white;
+}
+.button001 a:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #313131;
+    border-right: 3px solid #313131;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+/*↓右の矢印 */
+.button001 a:hover:after {
+    border-color: #white;
+}
+
+
+従業員新規登録のページ
+https://qiita.com/ikue-san/items/93d4e6dc857b24571393
+
+・inputのハコと文字のガタガタを直す。
+HTML
+<div class="form-area"><!-- divカッコ部分追記 -->
+			従業員新規登録
+			<form action="/Shifter/RegisterAccount" method="post">
+					ユーザーID  :<input type="text" name="id" value="u01"><br>
+					名前        :<input type="text" name="name" value="p01"><br>
+					ふりがな    :<input type="text" name="furigana" value="u01@sukkiri.com"><br>
+					ランク      :<input type="text" name="grade" value="u01"><br>
+					性別        :<input type="text" name="gender" value="1"><br>
+				<input type="submit" value="登録">
+			</form>
+		</div>
+
+
+
+
+HTML
+
+<tr>
+     <th><label for="userID">ユーザーID:</label></th>
+     <td><input type="text" name="id" value="01"></td>
+</tr><br>
+<tr>
+    <th><label for="password">パスワード:</label></th>
+    <td><input type="password" name="pass" value="123">
+</tr><br>
+
+
+
+CSS
+/* CSS */
+.form-area {
+    width: fit-content;
+    margin: auto;
+}
+↓HTMLにて、ID等の文字に<label for="△△">〇〇</label>のタグをつける
+label {
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+}
+
+
+ログインページ
+・アマゾンやGメールのログインのページを参考にすると、
+　画面真ん中に四角の枠の中にあるので、同じように真ん中に四角を作成し、
+　IDやパスを入力できるようにするか？(確認する)
+
+メインのページ
+https://pc-walk.com/css-sticky-table/
+
+・スクロールバーを表に適用したい。
+・名前、調子、曜日の列は固定し、表内のシフト部分は動くようにしたい。
+・従業員数が多い場合、スクロールすると日付と曜日が見えなくなるのは不便なので、見えるようにしたい。
+・ウインドウのサイズによって、表のマスの形が変形するので、変わらないように固定したい。
+
+
+
+
+画像　縦方向　アニメーション
+https://pa-tu.work/t/7580
+
+コメント
+https://saruwakakun.com/html-css/reference/speech-bubble
+
+テキストエリア
+https://qiita.com/ampersand/items/ceaa5066d44990d30df3
+テキストエリア(JSあり)
+https://kodocode.net/design-js-textarea/
+
+プルダウン
+https://copypet.jp/797/

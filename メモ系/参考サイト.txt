@@ -1,0 +1,21 @@
+奉行Edge 勤怠管理クラウド シフト管理アプリ参考例
+https://www.obc.co.jp/bugyo-edge/attend/function/schedule
+
+BOOSTRAP
+https://getbootstrap.jp/
+
+動くデザイン集
+https://coco-factory.jp/ugokuweb/
+
+AOS
+https://michalsnik.github.io/aos/
+
+slick
+https://kenwheeler.github.io/slick/
+
+Calendarクラスを使ってカレンダーを作成しよう！
+https://joytas.net/programming/java/calendarapp
+
+Web制作を楽にするUIコピペサイト
+CSS Stock
+https://pote-chil.com/css-stock/ja/selectbox
